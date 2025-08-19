@@ -16,7 +16,7 @@ const app = express();
 app.use(
     cors(
         {
-            origin: process.env.CLIENT_URL || '*',
+            origin: process.env.CLIENT_URL || 'https://expense-tracker-i4gd.vercel.app/',
             methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
             allowedHeaders: ["Content-Type", "Authorization"],
         }
