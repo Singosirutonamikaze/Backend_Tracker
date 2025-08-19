@@ -16,13 +16,13 @@ const app = express();
 app.use(
     cors(
         {
-            origin: process.env.CLIENT_URL || 'https://expense-tracker-i4gd.vercel.app/',
+            origin: [process.env.CLIENT_URL, 'https://expense-tracker-i4gd.vercel.app', 'http://localhost:5173', 'http://localhost:3000'],
             methods: ["GET", "HEAD", "PUT", "PATCH", "POST", "DELETE"],
             allowedHeaders: ["Content-Type", "Authorization"],
+            credentials: true
         }
     )
 );
-
 
 app.use(express.json());
 
